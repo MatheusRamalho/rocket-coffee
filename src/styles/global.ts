@@ -102,30 +102,6 @@ export default createGlobalStyle`
         }
     }
 
-    h4 {
-        ${handleTypefaceTitle({ size: 'h4', device: 'desktop' })};
-        @include handleResponsive(s) {
-            ${handleTypefaceTitle({ size: 'h4', device: 'mobile' })};
-        }
-    }
-
-    h5 {
-        text-transform: uppercase;
-
-        ${handleTypefaceTitle({ size: 'h5', device: 'desktop' })};
-        @include handleResponsive(s) {
-            ${handleTypefaceTitle({ size: 'h5', device: 'mobile' })};
-        }
-    }
-
-    p {
-        ${handleTypefaceText({ size: 'text-2', device: 'desktop' })};
-
-        @include handleResponsive(s) {
-            ${handleTypefaceText({ size: 'text-2', device: 'mobile' })};
-        }
-    }
-
     /* --------------------------------------------------------------------------
     | CONTAINERS...
     |-------------------------------------------------------------------------- */
@@ -899,7 +875,7 @@ export default createGlobalStyle`
         border: ${props => props.theme.sizes.size4} dashed red;
     }
 
-    .logo {
+    /* .logo {
         will-change: filter;
 
         &:hover {
@@ -909,10 +885,23 @@ export default createGlobalStyle`
         &.react:hover {
             filter: drop-shadow(0 0 2em #61dafbaa);
         }
-    }
+    } */
 
     .coffee-img {
         width: 80%;
         margin: ${props => props.theme.sizes.size52} auto 0 auto;
+    }
+
+    .text-mobile {
+        max-width: 32rem;
+        margin: 0 auto ${props => props.theme.sizes.size72} auto;
+        text-align: center;
+        display: none;
+    }
+
+    @media screen and (max-width: ${props => props.theme.containers.medium}) {
+        .text-mobile {
+            display: block;
+        }
     }
 `;

@@ -1,7 +1,7 @@
-<h1 align="center"> NLW #10 Copa </h1>
+<h1 align="center"> Rocket coffee </h1>
 
 <p align="center">
-Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
+  Desafio da Rocketseat, layout base no figma apenas.
 </p>
 
 <p align="center">
@@ -18,22 +18,22 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
 <br>
 
 <p align="center">
-  <img alt="calendario da copa" src=".github/preview.jpg" width="100%">
+  <img alt="Preview do projeto" src=".github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
+- Vite
 - React JS
-- Next JS
 - TypeScript
 - Tailwindcss
 - Git e Github
 
 ## 💻 Projeto
 
-O Calendário da Copa é um projeto que mostra os jogos da Copa de 2022.
+Landing page de um site para pagar um café para o autor desenvolvedor de software.
 
 ## 🔖 Layout
 
@@ -45,5 +45,5 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Projeto proposto pela Rocketseat no NLW 10 copa do mundo 2022. <br/>
+Projeto proposto pela Rocketseat como desafio na plataforma <br/>
 Feito com ♥ by Matheus Ramalho :wave: [matheusramalho.dev](matheusramalho.dev)

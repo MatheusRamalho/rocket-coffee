@@ -35,4 +35,12 @@ export const LayoutWrapper = styled.div`
         height: 100%;
     }
 
+    @media screen and (max-width: ${props => props.theme.containers.medium}) {
+        padding: 0;
+
+        main {
+            margin-top: 88px;
+            height: 100%;
+        }
+    }
 `;

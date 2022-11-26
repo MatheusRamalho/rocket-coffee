@@ -8,9 +8,15 @@ export const LinkWrapper = styled(Link)`
     padding: ${props => props.theme.sizes.size12} ${props => props.theme.sizes.size36};
     border: ${props => props.theme.sizes.size1} solid ${props => props.theme.colors.primary};
     border-radius: ${props => props.theme.sizes.size6};
-    
+
     text-align: center;
     text-transform: uppercase;
     font-weight: ${props => props.theme.fonts.bold};
     color: ${props => props.theme.colors.white};
+    transition: background-color 2s, border-color 2s;
+
+    &:hover {
+        background-color: ${props => props.theme.colors.primary};
+        border-color: ${props => props.theme.colors.secondary};
+    }
 `;

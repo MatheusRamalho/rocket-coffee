@@ -14,4 +14,11 @@ export const HeaderWrapper = styled.div`
         -webkit-text-stroke-width: ${props => props.theme.sizes.size2};
         -webkit-text-stroke-color: ${props => props.theme.colors.primary};
     }
+
+    @media screen and (max-width: ${props => props.theme.containers.medium}) {
+        .title,
+        .subtitle {
+            font-size: ${props => props.theme.sizes.size52};
+        }
+    }
 `;
