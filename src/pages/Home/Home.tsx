@@ -2,7 +2,7 @@ import { Section } from "../../components/Section";
 import { Header } from "../../components/Header";
 import { Link } from "../../components/Link";
 
-import rocketCoffee from '../../assets/rocket-coffee.png';
+import rocketCoffee from '../../assets/imgs/rocket-coffee.png';
 
 export const HomePage = () => {
     return (
@@ -27,5 +27,3 @@ export const HomePage = () => {
         </Section>
     );
 }
-
-// @media screen and(max - width: ${ props => props.theme.containers.medium }) {

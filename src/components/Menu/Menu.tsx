@@ -3,10 +3,10 @@ import { ReactSVG } from "react-svg";
 
 import { Link } from "../Link";
 
-import brandDesktop from "../../assets/brand-desktop.svg";
-import brandMobile from "../../assets/brand-mobile.svg";
-import menuOpen from "../../assets/menu-open.svg";
-import menuClose from "../../assets/menu-close.svg";
+import brandDesktop from "../../assets/svgs/brand-desktop.svg";
+import brandMobile from "../../assets/svgs/brand-mobile.svg";
+import menuOpen from "../../assets/svgs/menu-open.svg";
+import menuClose from "../../assets/svgs/menu-close.svg";
 
 import { MenuWrapper } from "./Menu.styles";
 import { MenuProps } from "./Menu.types";

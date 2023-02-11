@@ -11,7 +11,7 @@ import GlobalStyle from './styles/global';
 import { Layout } from './components/Layout';
 
 export const App = () => {
-	const [theme] = usePersistedState<DefaultTheme>('theme', defaultTheme);
+	const [theme] = usePersistedState<DefaultTheme>('theme-rocket-coffee', defaultTheme);
 
 	return (
 		<ThemeProvider theme={theme}>
