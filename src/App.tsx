@@ -1,29 +1,25 @@
-import { BrowserRouter } from 'react-router-dom';
-import { DefaultTheme, ThemeProvider } from 'styled-components';
+import { BrowserRouter } from 'react-router-dom'
+import { DefaultTheme, ThemeProvider } from 'styled-components'
 
-import { usePersistedState } from './hooks/usePersistedState';
+import { defaultTheme } from './styles/default'
+import GlobalStyle from './styles/global'
 
-import { Routers } from './routes/Routes';
+import { usePersistedState } from './hooks/usePersistedState'
 
-import { defaultTheme } from "./styles/default";
-import GlobalStyle from './styles/global';
-
-import { Layout } from './components/Layout';
+import { Routers } from './routes/Routes'
 
 export const App = () => {
-	const [theme] = usePersistedState<DefaultTheme>('theme-rocket-coffee', defaultTheme);
+    const [theme] = usePersistedState<DefaultTheme>('theme-rocket-coffee', defaultTheme)
 
-	return (
-		<ThemeProvider theme={theme}>
-			<BrowserRouter>
-				<div className="App">
-					<GlobalStyle />
+    return (
+        <ThemeProvider theme={theme}>
+            <BrowserRouter>
+                <div className="App">
+                    <GlobalStyle />
 
-					<Layout>
-						<Routers />
-					</Layout>
-				</div>
-			</BrowserRouter>
-		</ThemeProvider>
-  	);
+                    <Routers />
+                </div>
+            </BrowserRouter>
+        </ThemeProvider>
+    )
 }

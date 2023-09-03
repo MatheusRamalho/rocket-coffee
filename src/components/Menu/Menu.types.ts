@@ -1,5 +1,5 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 
 export type MenuProps = {
-    children: ReactNode;
+    children: ReactNode
 }

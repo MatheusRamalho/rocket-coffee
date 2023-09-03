@@ -1,19 +1,13 @@
-import { createGlobalStyle } from "styled-components";
-import { handleTypefaceText, handleTypefaceTitle } from "./mixins";
+import { createGlobalStyle } from 'styled-components'
+import { handleTypefaceText, handleTypefaceTitle } from './mixins'
 
 export default createGlobalStyle`
-    /* --------------------------------------------------------------------------
-    | CSS RESET...
-    |-------------------------------------------------------------------------- */
     *, *::before, *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
 
-    /* --------------------------------------------------------------------------
-    | PAGE...
-    |-------------------------------------------------------------------------- */
     html {
         scroll-behavior: smooth;
     }
@@ -21,48 +15,39 @@ export default createGlobalStyle`
     body {
         width: 100%;
         min-height: 100vh;
-        background-color: ${props => props.theme.colors.blackDark};
+        background-color: ${(props) => props.theme.colors.blackDark};
 
-        font-family: ${props => props.theme.fonts.family};
-        font-weight: ${props => props.theme.fonts.regular};
-        color: ${props => props.theme.colors.white};
+        font-family: ${(props) => props.theme.fonts.family};
+        font-weight: ${(props) => props.theme.fonts.regular};
+        color: ${(props) => props.theme.colors.white};
 
         scroll-behavior: smooth;
 
         &::-webkit-scrollbar {
-            width: ${props => props.theme.sizes.size12};
-            padding-right: ${props => props.theme.sizes.size4};
-            background: ${props => props.theme.colors.black};
+            width: ${(props) => props.theme.sizes.size12};
+            padding-right: ${(props) => props.theme.sizes.size4};
+            background: ${(props) => props.theme.colors.black};
         }
 
         &::-webkit-scrollbar-thumb {
-            border-radius: ${props => props.theme.sizes.size2};
-            background: ${props => props.theme.colors.blackDark};
+            border-radius: ${(props) => props.theme.sizes.size2};
+            background: ${(props) => props.theme.colors.blackDark};
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | LISTS...
-    |-------------------------------------------------------------------------- */
     ul, ol {
         list-style-type: none;
     }
 
-    /* --------------------------------------------------------------------------
-    | FILES...
-    |-------------------------------------------------------------------------- */
     img, picture, video, canvas, svg {
         display: block;
         width: 100%;
     }
 
-    /* --------------------------------------------------------------------------
-    | LINKS...
-    |-------------------------------------------------------------------------- */
     a {
         ${handleTypefaceText({ size: 'text-3', device: 'desktop' })};
 
-        color: ${props => props.theme.colors.white};
+        color: ${(props) => props.theme.colors.white};
         text-decoration: none;
         outline: none;
         transition: .5s ease;
@@ -72,9 +57,6 @@ export default createGlobalStyle`
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | TYPOGRAPHYS...
-    |-------------------------------------------------------------------------- */
     h1, h2, h3, h4, h5, h6,
     p, span, small, address {
         overflow-wrap: break-word; // Para que o texto quebre...
@@ -102,14 +84,11 @@ export default createGlobalStyle`
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | CONTAINERS...
-    |-------------------------------------------------------------------------- */
     .container {
-        max-width: ${props => props.theme.containers.extraLarge};
+        max-width: ${(props) => props.theme.containers.extraLarge};
         overflow: hidden;
         margin: 0 auto;
-        padding: ${props => props.theme.sizes.size96} ${props => props.theme.sizes.size24};
+        padding: ${(props) => props.theme.sizes.size96} ${(props) => props.theme.sizes.size24};
 
         display: flex;
         justify-content: center;
@@ -117,14 +96,11 @@ export default createGlobalStyle`
         flex-direction: row;
 
         @include handleResponsive(s) {
-            padding: ${props => props.theme.sizes.size32} ${props => props.theme.sizes.size18};
+            padding: ${(props) => props.theme.sizes.size32} ${(props) => props.theme.sizes.size18};
             flex-direction: column;
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | FLEXBOX...
-    |-------------------------------------------------------------------------- */
     .flex {
         display: flex;
         align-items: center;
@@ -201,9 +177,6 @@ export default createGlobalStyle`
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | WIDTHS...
-    |-------------------------------------------------------------------------- */
     .w {
         &.w--auto {
             width: auto;
@@ -230,48 +203,45 @@ export default createGlobalStyle`
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | MARGIN...
-    |-------------------------------------------------------------------------- */
     .m {
         &--0 {
             margin: 0;
         }
 
         &--1 {
-            margin: ${props => props.theme.sizes.size8};
+            margin: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            margin: ${props => props.theme.sizes.size16};
+            margin: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            margin: ${props => props.theme.sizes.size24};
+            margin: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            margin: ${props => props.theme.sizes.size32};
+            margin: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            margin: ${props => props.theme.sizes.size48};
+            margin: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            margin: ${props => props.theme.sizes.size64};
+            margin: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            margin: ${props => props.theme.sizes.size72};
+            margin: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            margin: ${props => props.theme.sizes.size96};
+            margin: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            margin: ${props => props.theme.sizes.size128};
+            margin: ${(props) => props.theme.sizes.size128};
         }
 
         &--auto {
@@ -285,39 +255,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            margin-top: ${props => props.theme.sizes.size8};
+            margin-top: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            margin-top: ${props => props.theme.sizes.size16};
+            margin-top: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            margin-top: ${props => props.theme.sizes.size24};
+            margin-top: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            margin-top: ${props => props.theme.sizes.size32};
+            margin-top: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            margin-top: ${props => props.theme.sizes.size48};
+            margin-top: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            margin-top: ${props => props.theme.sizes.size64};
+            margin-top: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            margin-top: ${props => props.theme.sizes.size72};
+            margin-top: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            margin-top: ${props => props.theme.sizes.size96};
+            margin-top: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            margin-top: ${props => props.theme.sizes.size128};
+            margin-top: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -327,39 +297,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            margin-right: ${props => props.theme.sizes.size8};
+            margin-right: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            margin-right: ${props => props.theme.sizes.size16};
+            margin-right: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            margin-right: ${props => props.theme.sizes.size24};
+            margin-right: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            margin-right: ${props => props.theme.sizes.size32};
+            margin-right: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            margin-right: ${props => props.theme.sizes.size48};
+            margin-right: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            margin-right: ${props => props.theme.sizes.size64};
+            margin-right: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            margin-right: ${props => props.theme.sizes.size72};
+            margin-right: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            margin-right: ${props => props.theme.sizes.size96};
+            margin-right: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            margin-right: ${props => props.theme.sizes.size128};
+            margin-right: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -369,39 +339,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            margin-bottom: ${props => props.theme.sizes.size8};
+            margin-bottom: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            margin-bottom: ${props => props.theme.sizes.size16};
+            margin-bottom: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            margin-bottom: ${props => props.theme.sizes.size24};
+            margin-bottom: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            margin-bottom: ${props => props.theme.sizes.size32};
+            margin-bottom: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            margin-bottom: ${props => props.theme.sizes.size48};
+            margin-bottom: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            margin-bottom: ${props => props.theme.sizes.size64};
+            margin-bottom: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            margin-bottom: ${props => props.theme.sizes.size72};
+            margin-bottom: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            margin-bottom: ${props => props.theme.sizes.size96};
+            margin-bottom: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            margin-bottom: ${props => props.theme.sizes.size128};
+            margin-bottom: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -411,39 +381,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            margin-left: ${props => props.theme.sizes.size8};
+            margin-left: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            margin-left: ${props => props.theme.sizes.size16};
+            margin-left: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            margin-left: ${props => props.theme.sizes.size24};
+            margin-left: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            margin-left: ${props => props.theme.sizes.size32};
+            margin-left: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            margin-left: ${props => props.theme.sizes.size48};
+            margin-left: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            margin-left: ${props => props.theme.sizes.size64};
+            margin-left: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            margin-left: ${props => props.theme.sizes.size72};
+            margin-left: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            margin-left: ${props => props.theme.sizes.size96};
+            margin-left: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            margin-left: ${props => props.theme.sizes.size128};
+            margin-left: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -454,48 +424,48 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            margin-left: ${props => props.theme.sizes.size8};
-            margin-right: ${props => props.theme.sizes.size8};
+            margin-left: ${(props) => props.theme.sizes.size8};
+            margin-right: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            margin-left: ${props => props.theme.sizes.size16};
-            margin-right: ${props => props.theme.sizes.size16};
+            margin-left: ${(props) => props.theme.sizes.size16};
+            margin-right: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-        margin-left: ${props => props.theme.sizes.size24};
-            margin-right: ${props => props.theme.sizes.size24};
+        margin-left: ${(props) => props.theme.sizes.size24};
+            margin-right: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            margin-left: ${props => props.theme.sizes.size32};
-            margin-right: ${props => props.theme.sizes.size32};
+            margin-left: ${(props) => props.theme.sizes.size32};
+            margin-right: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            margin-left: ${props => props.theme.sizes.size48};
-            margin-right: ${props => props.theme.sizes.size48};
+            margin-left: ${(props) => props.theme.sizes.size48};
+            margin-right: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            margin-left: ${props => props.theme.sizes.size64};
-            margin-right: ${props => props.theme.sizes.size64};
+            margin-left: ${(props) => props.theme.sizes.size64};
+            margin-right: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-        margin-left: ${props => props.theme.sizes.size72};
-            margin-right: ${props => props.theme.sizes.size72};
+        margin-left: ${(props) => props.theme.sizes.size72};
+            margin-right: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            margin-left: ${props => props.theme.sizes.size96};
-            margin-right: ${props => props.theme.sizes.size96};
+            margin-left: ${(props) => props.theme.sizes.size96};
+            margin-right: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            margin-left: ${props => props.theme.sizes.size128};
-            margin-right: ${props => props.theme.sizes.size128};
+            margin-left: ${(props) => props.theme.sizes.size128};
+            margin-right: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -506,93 +476,90 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            margin-top: ${props => props.theme.sizes.size8};
-            margin-bottom: ${props => props.theme.sizes.size8};
+            margin-top: ${(props) => props.theme.sizes.size8};
+            margin-bottom: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            margin-top: ${props => props.theme.sizes.size16};
-            margin-bottom: ${props => props.theme.sizes.size16};
+            margin-top: ${(props) => props.theme.sizes.size16};
+            margin-bottom: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            margin-top: ${props => props.theme.sizes.size24};
-            margin-bottom: ${props => props.theme.sizes.size24};
+            margin-top: ${(props) => props.theme.sizes.size24};
+            margin-bottom: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            margin-top: ${props => props.theme.sizes.size32};
-            margin-bottom: ${props => props.theme.sizes.size32};
+            margin-top: ${(props) => props.theme.sizes.size32};
+            margin-bottom: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            margin-top: ${props => props.theme.sizes.size48};
-            margin-bottom: ${props => props.theme.sizes.size48};
+            margin-top: ${(props) => props.theme.sizes.size48};
+            margin-bottom: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            margin-top: ${props => props.theme.sizes.size64};
-            margin-bottom: ${props => props.theme.sizes.size64};
+            margin-top: ${(props) => props.theme.sizes.size64};
+            margin-bottom: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            margin-top: ${props => props.theme.sizes.size72};
-            margin-bottom: ${props => props.theme.sizes.size72};
+            margin-top: ${(props) => props.theme.sizes.size72};
+            margin-bottom: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            margin-top: ${props => props.theme.sizes.size96};
-            margin-bottom: ${props => props.theme.sizes.size96};
+            margin-top: ${(props) => props.theme.sizes.size96};
+            margin-bottom: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            margin-top: ${props => props.theme.sizes.size128};
-            margin-bottom: ${props => props.theme.sizes.size128};
+            margin-top: ${(props) => props.theme.sizes.size128};
+            margin-bottom: ${(props) => props.theme.sizes.size128};
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | PADDING...
-    |-------------------------------------------------------------------------- */
     .p {
         &--0 {
             padding: 0;
         }
 
         &--1 {
-            padding: ${props => props.theme.sizes.size8};
+            padding: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            padding: ${props => props.theme.sizes.size16};
+            padding: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            padding: ${props => props.theme.sizes.size24};
+            padding: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            padding: ${props => props.theme.sizes.size32};
+            padding: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            padding: ${props => props.theme.sizes.size48};
+            padding: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            padding: ${props => props.theme.sizes.size64};
+            padding: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            padding: ${props => props.theme.sizes.size72};
+            padding: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            padding: ${props => props.theme.sizes.size96};
+            padding: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            padding: ${props => props.theme.sizes.size128};
+            padding: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -602,39 +569,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            padding-top: ${props => props.theme.sizes.size8};
+            padding-top: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            padding-top: ${props => props.theme.sizes.size16};
+            padding-top: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            padding-top: ${props => props.theme.sizes.size24};
+            padding-top: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            padding-top: ${props => props.theme.sizes.size32};
+            padding-top: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            padding-top: ${props => props.theme.sizes.size48};
+            padding-top: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            padding-top: ${props => props.theme.sizes.size64};
+            padding-top: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            padding-top: ${props => props.theme.sizes.size72};
+            padding-top: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            padding-top: ${props => props.theme.sizes.size96};
+            padding-top: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            padding-top: ${props => props.theme.sizes.size128};
+            padding-top: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -644,39 +611,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            padding-right: ${props => props.theme.sizes.size8};
+            padding-right: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            padding-right: ${props => props.theme.sizes.size16};
+            padding-right: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            padding-right: ${props => props.theme.sizes.size24};
+            padding-right: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            padding-right: ${props => props.theme.sizes.size32};
+            padding-right: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            padding-right: ${props => props.theme.sizes.size48};
+            padding-right: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            padding-right: ${props => props.theme.sizes.size64};
+            padding-right: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            padding-right: ${props => props.theme.sizes.size72};
+            padding-right: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            padding-right: ${props => props.theme.sizes.size96};
+            padding-right: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            padding-right: ${props => props.theme.sizes.size128};
+            padding-right: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -686,39 +653,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            padding-bottom: ${props => props.theme.sizes.size8};
+            padding-bottom: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            padding-bottom: ${props => props.theme.sizes.size16};
+            padding-bottom: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            padding-bottom: ${props => props.theme.sizes.size24};
+            padding-bottom: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            padding-bottom: ${props => props.theme.sizes.size32};
+            padding-bottom: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            padding-bottom: ${props => props.theme.sizes.size48};
+            padding-bottom: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            padding-bottom: ${props => props.theme.sizes.size64};
+            padding-bottom: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            padding-bottom: ${props => props.theme.sizes.size72};
+            padding-bottom: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            padding-bottom: ${props => props.theme.sizes.size96};
+            padding-bottom: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            padding-bottom: ${props => props.theme.sizes.size128};
+            padding-bottom: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -728,39 +695,39 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            padding-left: ${props => props.theme.sizes.size8};
+            padding-left: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            padding-left: ${props => props.theme.sizes.size16};
+            padding-left: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            padding-left: ${props => props.theme.sizes.size24};
+            padding-left: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            padding-left: ${props => props.theme.sizes.size32};
+            padding-left: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            padding-left: ${props => props.theme.sizes.size48};
+            padding-left: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            padding-left: ${props => props.theme.sizes.size64};
+            padding-left: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            padding-left: ${props => props.theme.sizes.size72};
+            padding-left: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            padding-left: ${props => props.theme.sizes.size96};
+            padding-left: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            padding-left: ${props => props.theme.sizes.size128};
+            padding-left: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -771,48 +738,48 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            padding-left: ${props => props.theme.sizes.size8};
-            padding-right: ${props => props.theme.sizes.size8};
+            padding-left: ${(props) => props.theme.sizes.size8};
+            padding-right: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            padding-left: ${props => props.theme.sizes.size16};
-            padding-right: ${props => props.theme.sizes.size16};
+            padding-left: ${(props) => props.theme.sizes.size16};
+            padding-right: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-        padding-left: ${props => props.theme.sizes.size24};
-            padding-right: ${props => props.theme.sizes.size24};
+        padding-left: ${(props) => props.theme.sizes.size24};
+            padding-right: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            padding-left: ${props => props.theme.sizes.size32};
-            padding-right: ${props => props.theme.sizes.size32};
+            padding-left: ${(props) => props.theme.sizes.size32};
+            padding-right: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            padding-left: ${props => props.theme.sizes.size48};
-            padding-right: ${props => props.theme.sizes.size48};
+            padding-left: ${(props) => props.theme.sizes.size48};
+            padding-right: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            padding-left: ${props => props.theme.sizes.size64};
-            padding-right: ${props => props.theme.sizes.size64};
+            padding-left: ${(props) => props.theme.sizes.size64};
+            padding-right: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-        padding-left: ${props => props.theme.sizes.size72};
-            padding-right: ${props => props.theme.sizes.size72};
+        padding-left: ${(props) => props.theme.sizes.size72};
+            padding-right: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            padding-left: ${props => props.theme.sizes.size96};
-            padding-right: ${props => props.theme.sizes.size96};
+            padding-left: ${(props) => props.theme.sizes.size96};
+            padding-right: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            padding-left: ${props => props.theme.sizes.size128};
-            padding-right: ${props => props.theme.sizes.size128};
+            padding-left: ${(props) => props.theme.sizes.size128};
+            padding-right: ${(props) => props.theme.sizes.size128};
         }
     }
 
@@ -823,85 +790,70 @@ export default createGlobalStyle`
         }
 
         &--1 {
-            padding-top: ${props => props.theme.sizes.size8};
-            padding-bottom: ${props => props.theme.sizes.size8};
+            padding-top: ${(props) => props.theme.sizes.size8};
+            padding-bottom: ${(props) => props.theme.sizes.size8};
         }
 
         &--2 {
-            padding-top: ${props => props.theme.sizes.size16};
-            padding-bottom: ${props => props.theme.sizes.size16};
+            padding-top: ${(props) => props.theme.sizes.size16};
+            padding-bottom: ${(props) => props.theme.sizes.size16};
         }
 
         &--3 {
-            padding-top: ${props => props.theme.sizes.size24};
-            padding-bottom: ${props => props.theme.sizes.size24};
+            padding-top: ${(props) => props.theme.sizes.size24};
+            padding-bottom: ${(props) => props.theme.sizes.size24};
         }
 
         &--4 {
-            padding-top: ${props => props.theme.sizes.size32};
-            padding-bottom: ${props => props.theme.sizes.size32};
+            padding-top: ${(props) => props.theme.sizes.size32};
+            padding-bottom: ${(props) => props.theme.sizes.size32};
         }
 
         &--5 {
-            padding-top: ${props => props.theme.sizes.size48};
-            padding-bottom: ${props => props.theme.sizes.size48};
+            padding-top: ${(props) => props.theme.sizes.size48};
+            padding-bottom: ${(props) => props.theme.sizes.size48};
         }
 
         &--6 {
-            padding-top: ${props => props.theme.sizes.size64};
-            padding-bottom: ${props => props.theme.sizes.size64};
+            padding-top: ${(props) => props.theme.sizes.size64};
+            padding-bottom: ${(props) => props.theme.sizes.size64};
         }
 
         &--7 {
-            padding-top: ${props => props.theme.sizes.size72};
-            padding-bottom: ${props => props.theme.sizes.size72};
+            padding-top: ${(props) => props.theme.sizes.size72};
+            padding-bottom: ${(props) => props.theme.sizes.size72};
         }
 
         &--8 {
-            padding-top: ${props => props.theme.sizes.size96};
-            padding-bottom: ${props => props.theme.sizes.size96};
+            padding-top: ${(props) => props.theme.sizes.size96};
+            padding-bottom: ${(props) => props.theme.sizes.size96};
         }
 
         &--9 {
-            padding-top: ${props => props.theme.sizes.size128};
-            padding-bottom: ${props => props.theme.sizes.size128};
+            padding-top: ${(props) => props.theme.sizes.size128};
+            padding-bottom: ${(props) => props.theme.sizes.size128};
         }
     }
 
-    /* --------------------------------------------------------------------------
-    | TESTES...
-    |-------------------------------------------------------------------------- */
     .border {
-        border: ${props => props.theme.sizes.size4} dashed red;
+        border: ${(props) => props.theme.sizes.size4} dashed red;
     }
-
-    /* .logo {
-        will-change: filter;
-
-        &:hover {
-            filter: drop-shadow(0 0 2em #646cffaa);
-        }
-
-        &.react:hover {
-            filter: drop-shadow(0 0 2em #61dafbaa);
-        }
-    } */
 
     .coffee-img {
         width: 80%;
-        margin: ${props => props.theme.sizes.size52} auto 0 auto;
+        margin: ${(props) => props.theme.sizes.size52} auto 0 auto;
     }
 
     .text-mobile {
         max-width: 32rem;
-        margin: 0 auto ${props => props.theme.sizes.size72} auto;
+        margin: 0 auto ${(props) => props.theme.sizes.size72} auto;
         text-align: center;
         display: none;
     }
 
-    @media screen and (max-width: ${props => props.theme.containers.medium}) {
+    @media screen and (max-width: ${(props) => props.theme.containers.medium}) {
         .text-mobile {
             display: block;
         }
     }
-`;
+`

@@ -1,23 +1,23 @@
-import { useState } from "react";
-import { ReactSVG } from "react-svg";
+import { useState } from 'react'
+import { ReactSVG } from 'react-svg'
 
-import { Link } from "../Link";
+import { Link } from '../Link'
 
-import brandDesktop from "../../assets/svgs/brand-desktop.svg";
-import brandMobile from "../../assets/svgs/brand-mobile.svg";
-import menuOpen from "../../assets/svgs/menu-open.svg";
-import menuClose from "../../assets/svgs/menu-close.svg";
+import brandDesktop from '../../assets/svgs/brand-desktop.svg'
+import brandMobile from '../../assets/svgs/brand-mobile.svg'
+import menuOpen from '../../assets/svgs/menu-open.svg'
+import menuClose from '../../assets/svgs/menu-close.svg'
 
-import { MenuWrapper } from "./Menu.styles";
-import { MenuProps } from "./Menu.types";
+import { MenuWrapper } from './Menu.styles'
+import { MenuProps } from './Menu.types'
 
 export const Menu = ({ children }: MenuProps) => {
-    const [menuImgAction, setMenuImgAction] = useState(menuOpen);
-    const [mobileOpen, setMobileOpen] = useState(false);
+    const [menuImgAction, setMenuImgAction] = useState(menuOpen)
+    const [mobileOpen, setMobileOpen] = useState(false)
 
     const handleToggleMenu = () => {
-        (menuImgAction === menuOpen) ? setMenuImgAction(menuClose) : setMenuImgAction(menuOpen);
-        (mobileOpen === false) ? setMobileOpen(true) : setMobileOpen(false);
+        menuImgAction === menuOpen ? setMenuImgAction(menuClose) : setMenuImgAction(menuOpen)
+        mobileOpen === false ? setMobileOpen(true) : setMobileOpen(false)
     }
 
     return (
@@ -29,9 +29,7 @@ export const Menu = ({ children }: MenuProps) => {
                 </div>
 
                 <nav className={`menu-nav ${mobileOpen && 'menu-nav--open'}`}>
-                    <ul className="menu-list">
-                        {children}
-                    </ul>
+                    <ul className="menu-list">{children}</ul>
                 </nav>
 
                 <div className="menu-action">
@@ -47,5 +45,5 @@ export const Menu = ({ children }: MenuProps) => {
                 </div>
             </div>
         </MenuWrapper>
-    );
+    )
 }

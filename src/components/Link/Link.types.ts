@@ -1,4 +1,4 @@
 export type LinkProps = {
-    text: string;
-    link: string;
+    text: string
+    link: string
 }

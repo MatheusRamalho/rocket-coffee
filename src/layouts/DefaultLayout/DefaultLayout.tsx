@@ -1,12 +1,13 @@
-import { Menu } from "../Menu";
-import { MenuItem } from "../MenuItem";
+import { Outlet } from 'react-router-dom'
 
-import { LayoutWrapper } from "./Layout.styles";
-import { LayoutProps } from "./Layout.types";
+import { Menu } from '../../components/Menu'
+import { MenuItem } from '../../components/MenuItem'
 
-export const Layout = ({ children }: LayoutProps) => {
+import { DefaultLayoutWrapper } from './DefaultLayout.styles'
+
+export const DefaultLayout = () => {
     return (
-        <LayoutWrapper>
+        <DefaultLayoutWrapper>
             <Menu>
                 <MenuItem text="Home" link="/" />
                 <MenuItem text="Menu" link="/" />
@@ -16,8 +17,8 @@ export const Layout = ({ children }: LayoutProps) => {
             </Menu>
 
             <main className="content">
-                {children}
+                <Outlet />
             </main>
-        </LayoutWrapper>
-    );
+        </DefaultLayoutWrapper>
+    )
 }

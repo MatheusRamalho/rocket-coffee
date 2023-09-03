@@ -1,5 +1,3 @@
-import { DefaultTheme } from 'styled-components';
-
 export const defaultTheme = {
     title: 'default',
 
@@ -63,4 +61,4 @@ export const defaultTheme = {
         medium: '960px',
         small: '540px',
     },
-};
+}

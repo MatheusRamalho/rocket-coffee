@@ -1,5 +1,5 @@
-import { HeaderWrapper } from "./Header.styles";
-import { HeaderProps } from "./Header.types";
+import { HeaderWrapper } from './Header.styles'
+import { HeaderProps } from './Header.types'
 
 export const Header = ({ title, subtitle }: HeaderProps) => {
     return (
@@ -7,5 +7,5 @@ export const Header = ({ title, subtitle }: HeaderProps) => {
             <h1 className="title"> {title} </h1>
             <h1 className="subtitle"> {`<${subtitle}/>`} </h1>
         </HeaderWrapper>
-    );
+    )
 }

@@ -1,13 +1,17 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom'
 
-import { HomePage } from "../pages/Home/Home";
-import { NotFoundPage } from "../pages/NotFound/NotFound";
+import { DefaultLayout } from '../layouts/DefaultLayout'
+
+import { HomePage } from '../pages/Home'
+import { NotFoundPage } from '../pages/NotFound'
 
 export const Routers = () => {
     return (
         <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route path="/" element={<DefaultLayout />}>
+                <Route path="/" element={<HomePage />} />
+                <Route path="*" element={<NotFoundPage />} />
+            </Route>
         </Routes>
-    );
+    )
 }

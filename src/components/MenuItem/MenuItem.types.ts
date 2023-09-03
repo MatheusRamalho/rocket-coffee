@@ -1,4 +1,4 @@
 export type MenuItemProps = {
-    text: string;
-    link: string;
+    text: string
+    link: string
 }
