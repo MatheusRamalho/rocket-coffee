@@ -1,7 +1,7 @@
-import { Header } from '../../components/Header'
-import { Section } from '../../components/Section'
+import { Header } from '@/components/Header'
+import { Section } from '@/components/Section'
 
-export const NotFoundPage = () => {
+export default function NotFound() {
     return (
         <Section id="sect-not-found" legend="Página não encontrada">
             <Header title="Error 404" subtitle="Not found" />
